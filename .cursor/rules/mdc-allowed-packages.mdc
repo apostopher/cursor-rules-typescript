@@ -1,0 +1,87 @@
+---
+description: 
+globs: *.json
+alwaysApply: false
+---
+---
+name: allowed-packages
+description: This rule documents all the approved packages in our project and when to use them.
+---
+
+Core Framework & Runtime:
+- next: The React framework for production-grade applications with server-side rendering, routing, and more
+- react: Core library for building user interfaces
+- react-dom: React package for working with the DOM
+- typescript: Static type checker for JavaScript, enhancing code quality and developer experience
+
+UI & Component Libraries:
+- @radix-ui/themes: Unstyled, accessible components for building high-quality design systems
+- @radix-ui/react-icons: A collection of crisp, consistent icons
+- @radix-ui/react-compose-refs: Utility for composing multiple React refs
+- motion: Lightweight animation library
+- motion-plus: Extension for motion library with additional features
+- react-aria: Adobe's library for building accessible React applications
+- react-aria-components: Pre-built accessible components
+- @react-stately/*: Collection of React hooks for managing component state
+- @react-types/*: TypeScript types for React Aria components
+
+AI & Machine Learning:
+- @11labs/react: Eleven Labs voice AI integration
+- @ai-sdk/*: Collection of AI provider SDKs (Anthropic, Google, OpenAI)
+- ai: Vercel's AI utilities
+- openai: Official OpenAI API client
+
+State Management & Data Fetching:
+- zustand: Primitive and flexible state management for React
+- @tanstack/react-query: Powerful data synchronization for React
+- @vercel/kv: Key-value storage solution from Vercel
+
+Utilities & Helpers:
+- axios: Promise-based HTTP client
+- cheerio: Fast, flexible HTML parser
+- clsx: Utility for constructing className strings
+- date-fns: Modern JavaScript date utility library
+- lodash: Utility library delivering modularity, performance & extras
+- nanoid: Small, secure, URL-friendly unique string ID generator
+- zod: TypeScript-first schema validation
+- tailwind-merge: Utility for merging Tailwind CSS classes
+
+Internationalization & Formatting:
+- react-intl: Internationalization library for React
+- react-markdown: Markdown component for React
+- remark-gfm: GitHub Flavored Markdown support
+- remark-math: Math support for markdown
+
+Development & Testing:
+- @playwright/test: End-to-end testing framework
+- @storybook/*: Development environment for UI components
+- eslint: JavaScript linter
+- prettier: Code formatter
+- postcss: Tool for transforming CSS
+- tailwindcss: Utility-first CSS framework
+
+Monitoring & Analytics:
+- @sentry/nextjs: Error tracking and performance monitoring
+
+Environment & Type Safety:
+- @t3-oss/env-nextjs: Type-safe environment variables
+- @types/*: TypeScript type definitions for various packages
+
+Search:
+- lunr: Lightweight full-text search library
+
+Best Practices:
+1. Always use the package manager specified in package.json (pnpm)
+2. When adding new packages, ensure they are compatible with the existing ecosystem
+3. Prefer packages with TypeScript support
+4. Consider bundle size impact when adding new packages
+5. Check for security vulnerabilities before adding new packages
+6. Use the latest stable versions when possible
+7. Document any specific configuration requirements
+
+Adding New Packages:
+1. Use `pnpm add` for production dependencies
+2. Use `pnpm add -D` for development dependencies
+3. Document the package's purpose in this file
+4. Ensure the package has active maintenance
+5. Consider alternatives from already included packages before adding new ones
